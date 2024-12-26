@@ -2,6 +2,7 @@
 配合接口实现类似抖音效果的随机在线播放器，内置接口提供了 10W+ 随机地址播放
 
 
+
 ## 使用方法
 直接下载 `index.html` 文件，复制到网站根目录，配置好域名即可访问
 
@@ -18,15 +19,15 @@
 ```
 
 2. 纯文本格式
-同时也支持直接返回纯文本地址的 `GET` 请求，例如：
-`https://mm.diskgirl.com/get/get1.php`
-
-返回格式：
-```json
+同时也支持直接返回纯文本地址的 `GET` 请求，例如
+`https://mm.diskgirl.com/get/get1.php`，返回格式：
+```
 https://txmov2.a.yximgs.com/upic/2021/07/06/11/BMjAyMTA3MDYxMTIxNDZfMjM2MzkyOTY3Nl81MjcwMDc1MjQ0M18yXzM=_b_Bbbb2fa053f02e7f32cef6efe3577eb6d.mp4
 ```
 
-请确保请求地址支持跨域，否则无法正常播放
+**PS：请确保请求地址支持跨域，否则无法正常播放**
+
+
 
 ## 爬虫说明
 该爬虫支持爬取开启了 nginx autoindex 网站，运行期请确认变量 `base_url` 是否可以访问，默认会爬取所有 `m3u8` 地址，存储到 `m3u8_links.txt` 文件中
@@ -45,3 +46,7 @@ pip install requests beautifulsoup4
 ```
 可以获取到很多类似的地址，见下图：
 ![zoomeye](./01.png)
+
+
+## License
+This project is provided under a GNU Affero General Public License v3.0 license that can be found in the [LICENSE](LICENSE) file. By using, distributing, or contributing to this project, you agree to the terms and conditions of this license.
