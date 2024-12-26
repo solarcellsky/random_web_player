@@ -30,7 +30,7 @@ https://txmov2.a.yximgs.com/upic/2021/07/06/11/BMjAyMTA3MDYxMTIxNDZfMjM2MzkyOTY3
 
 
 ## 爬虫说明
-该爬虫支持爬取开启了 nginx autoindex 网站，运行期请确认变量 `base_url` 是否可以访问，默认会爬取所有 `m3u8` 地址，存储到 `m3u8_links.txt` 文件中
+该爬虫支持爬取开启了 nginx autoindex 网站，运行前请确认变量 `base_url` 是否可以访问，默认会爬取所有 `m3u8` 地址，存储到 `m3u8_links.txt` 文件中
 
 使用前，确保你已经安装了所需的 Python 库：
 ```bash
