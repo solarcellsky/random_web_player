@@ -1,5 +1,21 @@
 # Random Web Player
-配合接口实现类似抖音效果的随机在线播放器，内置接口提供了 10W+ 随机地址播放
+配合接口实现类似抖音效果的随机在线播放器，内置接口提供了 20W+ 随机地址播放
+
+Demo 地址: http://43.154.146.172/
+
+Cloudflare Pages: https://fuli.wwlww.org/
+
+[![GitHub license](https://img.shields.io/github/license/levywang/random_web_player?label=License&logo=github)](https://github.com/levywang/random_web_player "Click to view the repo on Github")
+[![Release Version](https://img.shields.io/github/release/levywang/random_web_player?include_prereleases&label=Release&logo=github)](https://github.com/levywang/random_web_player/releases/latest "Click to view the repo on Github")
+[![GitHub Star](https://img.shields.io/github/stars/levywang/random_web_player?label=Stars&logo=github)](https://github.com/levywang/random_web_player "Click to view the repo on Github")
+[![GitHub Fork](https://img.shields.io/github/forks/levywang/random_web_player?label=Forks&logo=github)](https://github.com/levywang/random_web_player "Click to view the repo on Github")
+[![Repo Size](https://img.shields.io/github/repo-size/levywang/random_web_player?label=Size&logo=github)](https://github.com/levywang/random_web_player "Click to view the repo on Github")
+[![GitHub Fork](https://img.shields.io/github/issues-closed-raw/levywang/random_web_player?label=Closed%20Issue&logo=github)](https://github.com/levywang/random_web_player/issue "Click to view the repo on Github")
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/levywang/random_web_player.svg)](https://starchart.cc/levywang/random_web_player)
 
 
 
@@ -7,7 +23,7 @@
 直接下载 `index.html` 文件，复制到网站根目录，配置好域名即可访问
 
 你也可以设置自己的接口地址，默认接口地址为：`https://api.imwlw.com/v1/get_video`
-直接查找 `index.html` 替换即可
+直接查找 `index.html` 文件替换默认接口关键字替换即可
 
 支持以下两种返回格式：
 
@@ -18,7 +34,7 @@
 }
 ```
 
-2. 纯文本格式
+2. 纯文本格式  
 同时也支持直接返回纯文本地址的 `GET` 请求，例如
 `https://mm.diskgirl.com/get/get1.php`，返回格式：
 ```
@@ -44,8 +60,11 @@ pip install requests beautifulsoup4
 "<head><title>Index of /</title></head>" && "<a href=\"20230817/\">20230817/</a>"
 
 ```
+
+**日期并无特殊含义，仅作为示例过滤，您也可以使用正则表达式实现**
+
 可以获取到很多类似的地址，见下图：
-![zoomeye](./01.png)
+![zoomeye](./zoomeye.png)
 
 
 ## License
