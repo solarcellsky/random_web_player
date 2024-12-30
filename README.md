@@ -1,9 +1,10 @@
 # Random Web Player
-配合接口实现类似抖音效果的随机在线播放器，内置接口提供了 20W+ 随机地址播放
+配合接口实现类似抖音效果的随机在线播放器，内置接口提供了 50W+ 随机地址播放
 
-Demo 地址: http://43.154.146.172/
 
-Cloudflare Pages: https://fuli.wwlww.org/
+Cloudflare Page: https://random-web-player.pages.dev/
+
+
 
 [![GitHub license](https://img.shields.io/github/license/levywang/random_web_player?label=License&logo=github)](https://github.com/levywang/random_web_player "Click to view the repo on Github")
 [![Release Version](https://img.shields.io/github/release/levywang/random_web_player?include_prereleases&label=Release&logo=github)](https://github.com/levywang/random_web_player/releases/latest "Click to view the repo on Github")
@@ -22,7 +23,7 @@ Cloudflare Pages: https://fuli.wwlww.org/
 ## 使用方法
 直接下载 `index.html` 文件，复制到网站根目录，配置好域名即可访问
 
-你也可以设置自己的接口地址，默认接口地址为：`https://api.imwlw.com/v1/get_video`
+你也可以设置自己的接口地址，默认接口地址为：`https://api.wwlww.org/v1/get_video`
 直接查找 `index.html` 文件替换默认接口关键字替换即可
 
 支持以下两种返回格式：
@@ -43,6 +44,21 @@ https://txmov2.a.yximgs.com/upic/2021/07/06/11/BMjAyMTA3MDYxMTIxNDZfMjM2MzkyOTY3
 
 **PS：请确保请求地址支持跨域，否则无法正常播放**
 
+## 自建API教程
+**注意：Python Version >= 3.7**
+
+拷贝项目中的 `random_api.py` 到本地，新建目录，修改为 `main.py`
+
+注意 `random_api.py` 文件中的路径地址，为爬取到的播放源地址，参考 `video_urls.txt`
+
+```bash
+pip3 install fastapi uvicorn
+uvicorn main:app --host 0.0.0.0 --reload
+```
+
+默认运行的API地址：`http://127.0.0.1:8000/`
+
+可以配置反代和域名，替换 `index.html` 中的 `https://api.wwlww.org/v1/get_video`
 
 
 ## 爬虫说明
@@ -65,6 +81,7 @@ pip install requests beautifulsoup4
 
 可以获取到很多类似的地址，见下图：
 ![zoomeye](./zoomeye.png)
+
 
 
 ## License
